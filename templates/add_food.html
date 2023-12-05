@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Your Food</title>
+</head>
+<body>
+    <h1>Add Food</h1>
+    <form method="post">
+        <label for="food_name">Food Name:</label>
+        <input type="text" id="food_name" name="food_name"><br><br>
+        <label for="portion">Portion (grams):</label>
+        <input type="text" id="portion" name="portion"><br><br>
+        <p>Per 100 Grams:</p>
+        <label for="protein">Protein:</label>
+        <input type="text" id="protein" name="protein"><br><br>
+        <label for="carbs">Carbs:</label>
+        <input type="text" id="carbs" name="carbs"><br><br>
+        <label for="fat">Fat:</label>
+        <input type="text" id="fat" name="fat"><br><br>
+        <label for="price_100grams">Price:</label>
+        <input type="text" id="price_100grams" name="price_100grams"><br><br>
+        <input type="submit" value="Add Food">
+    </form>
+    <h3>Total Protein: </h3>
+    <p>{{ sum_protein }}</p>
+</body>
+</html>
+
