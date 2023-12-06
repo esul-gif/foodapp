@@ -78,4 +78,4 @@ def add_food():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
