@@ -4,7 +4,7 @@ TO DO:
 
 - Make empty strings null?
 - Better GUI
-- 
+- Connect to google cloud sql, because that way we dont have to configure our own firewall settings and publicly host a database from our own computer. C'mon -future=cloud.
 '''
 from flask import Flask, render_template, request
 import mysql.connector
@@ -15,9 +15,9 @@ app = Flask(__name__)
 
 # Connect to the database
 conn = mysql.connector.connect(
-    host='localhost',
-    user='foodapp',
-    password='Foodie_121_',
+    host='34.154.242.120',
+    user='root',
+    password='Donut121',
     database='my_food_db'
 )
 

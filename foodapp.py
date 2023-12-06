@@ -5,7 +5,7 @@ Work on api - django - start with simple ui
 
 Maybe make it so that everytime a new user joins, it creates a new table and only that user has privileges to edit that table. Also must create some sort of permissions to make sure the number of users isnt abused because if i use heroku ill have limited bandwidth i think.
 
-Also, if we turn it into a webapp then we need to make sure that we give access to the IP relevant to the user. Since i will be moving around, this might mean that we have to create a user relevant to whatrever ip im using when im in a different place? this could create too many users though. Maybe we can allow the ip address to change, as long as we can identify the user. 
+Also, if we turn it into a webapp then we need to make sure that we give access to the IP relevant to the user. Since i will be moving around, this might mean that we have to create a user relevant to whatrever ip im using when im in a different place? this could create too many users though. Maybe we can allow the ip address to change, as long as we can identify the user.
 '''
 
 import mysql.connector
