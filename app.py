@@ -33,16 +33,17 @@ cursor.execute('''
         protein INT,
         carbs INT,
         fat INT,
-        price_100grams INT,
+        package_size INT,
+        price INT,
         date DATE
     )
 ''')
 
 
 # Function to insert food data into the table
-def insert_food(food_name,portion,protein,carbs,fat,price_100grams,current_date):
-    sql = 'INSERT INTO foods (food_name,portion,protein,carbs,fat,price_100grams,date) VALUES (%s, %s, %s, %s, %s, %s, %s)'
-    values = (food_name,portion,protein,carbs,fat,price_100grams,current_date)
+def insert_food(food_name,portion,protein,carbs,fat,package_size,price,current_date):
+    sql = 'INSERT INTO foods (food_name,portion,protein,carbs,fat,package_size,price,date) VALUES (%s, %s, %s,%s, %s, %s, %s, %s)'
+    values = (food_name,portion,protein,carbs,fat,package_size,price,current_date)
     cursor.execute(sql,values)
     conn.commit()
 
@@ -59,9 +60,10 @@ def add_food():
         protein = request.form['protein']
         carbs = request.form['carbs']
         fat = request.form['fat']
-        price_100grams = request.form['price_100grams']
+        package_size = request.form['package_size']
+        price = request.form['price']
         current_date = datetime.now().date()
-        insert_food(food_name, portion, protein, carbs, fat, price_100grams, current_date)
+        insert_food(food_name, portion, protein, carbs, fat,package_size,price,current_date)
 
 
         # Fetch the sum of protein columns from the database for the current day
